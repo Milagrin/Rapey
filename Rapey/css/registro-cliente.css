@@ -85,126 +85,70 @@ hr{
     margin-bottom: 20px;
 }
 
-/* Ofertas */
-.ofertas{
-    width: 100%;
-    height: 550px;
-    background: url('./img/Promociones.jpg') no-repeat center center/cover;
-    padding-bottom: 40px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 20px;
-    padding: 50px;
+
+.main-section{
+    margin: 0 auto;
+    margin-top: 25%;
+    padding: 0;
 }
 
-.btn{
-    cursor: pointer;
-    display: inline-block;
+.modal-content{
+    background-color: #3b4652;
+    opacity: .85;
+    padding: 0 20px;
+    box-shadow: 0 0 3px #848484;
+}
+
+.user-img{
+    margin-top: -50px;
+    margin-bottom: 35px;
+}
+
+.user-img img{
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 3px #848484;
+    border-radius: 50%;
+}
+
+.form-group input{
+    height: 42px;
+    font-size: 18px;
     border: 0;
-    font-weight: bold;
-    padding: 10px 20px;
-    background: #262626;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    margin: 10px 0;
+    padding-left: 54px;
+    border-radius: 5px;
 }
 
-.btn:hover{
-    opacity: .7;
+.form-group::before{
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    left: 28px;
+    font-size: 22px;
+    padding-top: 4px;
+    color: black;
 }
 
-.ofertas h2,
-.ofertas p{
-    margin-bottom: 10px;
+.form-group#user-group::before{
+    content: "\f007";
 }
 
-/* NEW CARDS */
-
-.new-cards{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    margin: 10px 0;
-    font-size: 20px;
+.form-group#contrasena-group::before{
+    content: "\f022";
 }
 
-.new-cards img{
-    width: 350px;
-    margin-left: 120px;
+button{
+    width: 60%;
+    margin: 5px 0 25px; 
 }
 
-.new-cards h3{
-    font-size: 30px;
-    margin: 10px 0;
+.forgot, 
+.forgot2{
+    padding: 5px 0;
 }
 
-.new-cards a{
-    padding: 10px 0;
-    color: #f2f2f2;
-    text-transform: uppercase;
-    display: inline-block;
-    font-weight: bold;
-}
-
-.new-cards a:hover{
-    text-decoration: underline;
-}
-
-/* CARDS BANNER ONE */
-
-.cards-banner-one{
-    width: 100%;
-    height: 350px;
-    background: url(./img/Restaurantes.png) no-repeat center center/cover;
-    margin-bottom: 40px;
-    opacity: 100%;
-}
-
-.cards-banner-one .content{
-    width: 100%;
-    padding: 90px 0 0 40px;
-    color: #ffffff;
-    font-size: 20px;
-}
-
-.cards-banner-one p,
-.cards-banner-one h2{
-    margin: 10px 0 20px 0;
-}
-
-/* CARS NEWS 2 */
-
-.new-cards2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    margin: 10px 0;
-    font-size: 20px;
-}
-
-.new-cards2 img{
-    width: 350px;
-    margin-left: 120px;
-}
-
-.new-cards2 h3{
-    font-size: 30px;
-    margin: 10px 0;
-}
-
-.new-cards2 a{
-    padding: 10px 0;
-    color: #f2f2f2;
-    text-transform: uppercase;
-    display: inline-block;
-    font-weight: bold;
-}
-
-.new-cards2 a:hover{
-    text-decoration: underline;
+.forgot a, 
+.forgot2 a{
+    color: white;
 }
 
 /* Responsivo */
@@ -229,51 +173,5 @@ hr{
 
     .nav-main ul.nav-menu.show{
         transform: translate(-20px);
-    }
-
-    .ofertas{
-        padding: 20px;
-        font-size: 14px;
-    }
-
-    .cards-banner-one{
-        padding: 10px;
-        font-size: 14px;
-    }
-    
-    .nav-main ul.nav-menu li{
-        padding: 20px;
-        font-size: 14px;
-    }
-
-    .new-cards{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .new-cards2{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cards-banner-one .content{
-        width: 80%;
-    }
-}
-
-@media(max-width: 500px){
-    .new-cards, .new-cards2{
-        grid-template-columns: 1fr;
-    }
-
-    .new-cards img, 
-    .new-cards2 img
-    {
-        height: 270px;
-    }
-
-    .cards-banner-one .content,
-    .ofertas .content
-    {
-        width: 100%;
-        padding: 60px 20px;
     }
 }

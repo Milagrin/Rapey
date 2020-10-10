@@ -89,11 +89,12 @@
                     </div>
 
                     <div class="form-group" id="contrasena-group">
-                        <input class="form-control" type="text" placeholder="Nombre del cliente">
+                        <input class="form-control" type="text" placeholder="Nombre del cliente" onkeypress="return validarLetra(event)">
+
                     </div>
 
                     <div class="form-group" id="contrasena-group">
-                        <input class="form-control" type="text" placeholder="Edad">
+                        <input class="form-control" type="text" placeholder="Edad" onkeypress="return validarNumero(event)">
                     </div>
 
                     <div class="form-group" id="contrasena-group">
@@ -117,6 +118,29 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
     <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        function validarLetra(e){
+            tecla = (document.all)?e.keyCode:e.which;
+   
+            te = String.fromCharCode(tecla);
+   
+            patron = /[A-Z a-z áéíóú]/;
+   
+            return patron.test(te);
+   
+        }
+
+        function validarNumero(e){
+            tecla = (document.all)?e.keyCode:e.which;
+
+            te = String.fromCharCode(tecla);
+
+            patron = /[0-9]/;
+
+            return patron.test(te);
+        }
+    </script>
 
 </body>
 </html>

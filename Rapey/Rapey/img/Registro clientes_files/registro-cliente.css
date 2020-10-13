@@ -86,17 +86,100 @@ hr{
 }
 
 
-/*Pie de página HTML*/
-#footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin: auto;  
-    text-align: right;
+.main-section{
+    margin: 0 auto;
+    margin-top: 25%;
+    padding: 0;
 }
 
-/*Encabezado de la tabla de personas*/
-#tblList thead{
-    background: gray;
-    color: #FFF;
+.modal-content{
+    background-color: #3b4652;
+    opacity: .85;
+    padding: 0 20px;
+    box-shadow: 0 0 3px #848484;
+}
+
+.user-img{
+    margin-top: -50px;
+    margin-bottom: 35px;
+}
+
+.user-img img{
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 3px #848484;
+    border-radius: 50%;
+}
+
+.form-group input{
+    height: 42px;
+    font-size: 18px;
+    border: 0;
+    padding-left: 54px;
+    border-radius: 5px;
+}
+
+.form-group::before{
+    font-family: "Font Awesome\ 5 Free";
+    position: absolute;
+    left: 28px;
+    font-size: 22px;
+    padding-top: 4px;
+    color: black;
+}
+
+.form-group#user-group::before{
+    content: "\f007";
+}
+
+.form-group#contrasena-group::before{
+    content: "\f022";
+}
+
+button{
+    width: 60%;
+    margin: 5px 0 25px; 
+}
+
+.forgot, 
+.forgot2{
+    padding: 5px 0;
+}
+
+.forgot a, 
+.forgot2 a{
+    color: white;
+}
+
+/* Responsivo */
+@media (max-width: 700px){
+
+    .menu-btn{
+        display: block;
+    }
+
+    .nav-main ul.nav-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translate(-400px);
+        padding: 30px;
+        opacity: .9;
+        background: #262626;
+        transition: transform .5s ease-in-out;
+    }
+
+    .nav-main ul.nav-menu.show{
+        transform: translate(-20px);
+    }
+}
+
+h1{
+    text-align: center;
+}
+
+form{
+    width: 715px;
 }

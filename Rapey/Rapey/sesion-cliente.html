@@ -1,116 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="css/img/Rapey_logo.png" type="images/png">
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <!-- FONT OSWALD-->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
-    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
-    <!-- Los iconos tipo Solid de Fontawesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="css/registro-cliente.css">
+<html>
+    <head>
+        <title>Crud Cliente</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <link rel="icon" href="css/img/Rapey_logo.png" type="images/png">
+        <!-- Librería Google Fonts: Tipografía del sitio web -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-    <title>Inicio de sesion clientes</title>
-    
-</head>
-<body>
+        <!-- Librerías Bootstrap: Estilos externos del sitio web -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <div class="menu-btn">
-        <i class="fas fa-bars"></i>
-    </div>
+        <!-- Estilos del sitio web -->
+        <link rel="stylesheet" href="css/registro-cliente.css" />
 
-    <div class="container">
-                   <!-- Navigation -->
-                   <nav class="nav-main">
+        <!-- Funciones Javascript -->
+        <script type="text/javascript" src="js/regsitros-cliente.js"></script>
 
-                    <!-- Logo de la pagina-->
-                    <img src="css/img/Rapey_logo.png" alt="Rapey Logo" class="nav-brand">
         
-                    <!-- Etiquetas de la pagina -->
-                    <ul class="nav-menu"> 
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-        
-                        <li>
-                            <a href="seleccion-registro.html">Registrate</a>
-                        </li>
-        
-                        <li>
 
-                            <a href="restaurant.html">Restaurantes</a>
+    </head>
+    <body>
 
-                        </li>
-        
-                        <li>
-                            <a href="registro-cliente.html">Clientes</a>
-                        </li>
-        
-                        <li>
-                            <a href="registro-repartidor.html">Repartidores</a>
-                        </li>
-                        
-        
-                    </ul>
-                    
-                    <!-- Icono de busqueda -->
-                    <ul class="nav-menu-right">
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-search"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav> <!-- END NAVIGATION -->
-    
-                <hr class="hr">
+        <!-- Navigation -->
+        <nav class="nav-main">
 
-    </div>
+            <!-- Logo de la pagina-->
+            <img src="css/img/Rapey_logo.png" alt="Rapey Logo" class="nav-brand">
 
-    <div class="modal-dialog text-center">
-        <div class="col-sm-8 main-section">
-            <div class="modal-content"> 
+            <!-- Etiquetas de la pagina -->
+            <ul class="nav-menu"> 
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
 
-                <!-- Imagen -->
-                <div class="col-12 user-img">
-                    <img src="css/img/registro.png">
-                </div> 
+                <li>
+                    <a href="seleccion-registro.html">Registrate</a>
+                </li>
 
-                <!-- Formulario -->
-                <form class="col-12">
-                    <div class="form-group" id="user-group">
-                        <input class="form-control" type="text" placeholder="Nombre de usuario">
-                    </div>
+                <li>
 
-                    <div class="form-group" id="contrasena-group">
-                        <input class="form-control" type="password" placeholder="Contraseña">
-                    </div>
+                    <a href="restaurant.html">Restaurantes</a>
 
-                    <button type="submit" class="btn btn-primary">  Ingresar<i class="fas fa-sign-in-alt"></i></button>
-                </form>
+                </li>
 
-                <div class="col-12 forgot">
-                    <a href="#">Recordar contraseña</a>
-                </div>
-                <div class="col-12 forgot2">
-                    <a href="registro-cliente.html">Registrarse</a>
-                </div>
+                <li>
+                    <a href="sesion-cliente.html">Clientes</a>
+                </li>
+
+                <li>
+                    <a href="sesion-repartidor.html">Repartidores</a>
+                </li>
                 
-            </div>
-        </div>
-    </div>
-    
-    <!-- SCRIPTS -->
-    <script src="main.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
-    <!--JQUERY-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-</body>
+            </ul>
+
+            <hr class="hr">
+            
+            <!-- Icono de busqueda -->
+            <ul class="nav-menu-right">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav> <!-- END NAVIGATION -->
+
+
+        <!--Formulario de entrada de datos-->
+        <div class="container">
+            <form id="frmPerson" class="form-horizontal">
+                <div class="form-group">
+                    <label for="txtID" class="col-sm-2 control-label">Rut</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="txtID" class="form-control" placeholder="Rut">
+                    </div>
+                </div>                    
+                <div class="form-group">
+                    <label for="txtName" class="col-lg-2 control-label">Nombre</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="txtName" class="form-control" placeholder="Nombre">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtEdad" class="col-lg-2 control-label">Edad</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="txtEdad" class="form-control" placeholder="Edad">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtDireccion" class="col-lg-2 control-label">Direccion</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="txtDireccion" class="form-control" placeholder="Direccion">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-offset-2 col-sm-4">
+                        <input type="submit" value="Insertar" id="btnSave" class="btn btn-success"/>
+                    </div>
+                </div>
+            </form>
+        </div>      
+
+        <!--Tabla con la lista de datos-->
+        <div class="container">
+            <table id="tblList" class="table table-bordered"></table>
+        </div>
+
+    </body>
 </html>

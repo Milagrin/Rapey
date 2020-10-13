@@ -36,7 +36,7 @@ $(function () {
         Name: $("#txtName").val(),
         Fono: $("#txtFono").val(),
         Direccion: $("#txtDireccion").val(),
-        Region: $("#txtRegion")
+        Region: $("#txtRegion").val()
       }); 
       //Añadir el objeto a la tabla
       tblRestaurant.push(person);
@@ -118,7 +118,7 @@ $(function () {
       $("#txtName").val(per.Name);
       $("#txtFono").val(per.Fono);
       $("#txtDireccion").val(per.Direccion);
-      $("#txtRegion") .val(per.Region);   // fix // 
+      $("#txtRegion").val(per.Region);   // fix // 
       $("#txtID").attr("readonly", "readonly");
       $("#txtName").focus();
     });

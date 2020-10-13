@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="css/img/Rapey_logo.png" type="images/png">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- FONT OSWALD-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/registro-restaurant.css">
+    
+    <title>Registro de restaurant</title>
+</head>
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="container">
+                   <!-- Navigation -->
+                   <nav class="nav-main">
+
+                    <!-- Logo de la pagina-->
+                    <img src="css/img/Rapey_logo.png" alt="Rapey Logo" class="nav-brand">
+        
+                    <!-- Etiquetas de la pagina -->
+                    <ul class="nav-menu"> 
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+        
+                        <li>
+                            <a href="seleccion-registro.html">Registrate</a>
+                        </li>
+        
+                        <li>
+                            <a href="restaurant.html">Restaurantes</a>
+                        </li>
+        
+                        <li>
+                            <a href="registro-cliente.html">Clientes</a>
+                        </li>
+        
+                        <li>
+                            <a href="registro-repartidor.html">Repartidores</a>
+                        </li>
+                        
+        
+                    </ul>
+                    
+                    <!-- Icono de busqueda -->
+                    <ul class="nav-menu-right">
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav> <!-- END NAVIGATION -->
+    
+                <hr class="hr">
+    </div>
+    <div class="modal-dialog text-center">
+        <div class="col-sm-8 main-section">
+            <div class="modal-content"> 
+                <div class="col-12 user-img">
+                    <p style="color: black;">Inserte info del restaurant</p>
+                </div> 
+                <form class="col-12">
+                    <div class="form-group" id="user-group">
+                        <input class="form-control" type="text" placeholder="Rut de empresa">
+                    </div>
+
+                    <div class="form-group" id="contrasena-group">
+                        <input class="form-control" type="text" placeholder="Contraseña">
+                    </div>
+
+                    <div class="form-group" id="contrasena-group">
+                        <input class="form-control" type="text" placeholder="Nombre restaurant" onkeypress="return validarLetra(event)">
+                    </div>
+
+                    <div class="form-group" id="contrasena-group">
+                        <input class="form-control" type="text" placeholder="Region" onkeypress="return validarLetra(event)">
+                    </div>
+
+                    <div class="form-group" id="contrasena-group">
+                        <input class="form-control" type="text" placeholder="Direccion" onkeypress="return validarLetra(event)">
+                    </div>
+
+                    <div class="form-group" id="contrasena-group">
+                        <input class="form-control" type="text" placeholder="Fono contacto">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">  Ingresar<i class="fas fa-sign-in-alt"></i></button>
+                </form>
+                <div class="col-12 forgot2">
+                    <a href="sesion-restaurant.html">Inicia sesion</a>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function validarLetra(e){
+            tecla = (document.all)?e.keyCode:e.which;
+   
+            te = String.fromCharCode(tecla);
+   
+            patron = /[A-Z a-z áéíóú]/;
+   
+            return patron.test(te);
+   
+        }
+        function validarNumero(e){
+            tecla = (document.all)?e.keyCode:e.which;
+
+            te = String.fromCharCode(tecla);
+
+            patron = /[0-9]/;
+
+            return patron.test(te);
+        }
+    </script>
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="css/img/Rapey_logo.png" type="images/png">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <!-- FONT OSWALD-->
@@ -41,7 +42,9 @@
                         </li>
         
                         <li>
-                            <a href="#">Restaurantes</a>
+
+                            <a href="restaurant.html">Restaurantes</a>
+
                         </li>
         
                         <li>
@@ -69,78 +72,64 @@
 
     </div>
 
-    <div class="modal-dialog text-center">
-        <div class="col-sm-8 main-section">
-            <div class="modal-content"> 
+    <div class="container">
+        <div class="row">
+            <form>
+                <fieldset>
+                    <legend>
+                        Rut Cliente
+                    </legend>
+                    
+                    <input type="text" class="form-control" id ="rut"/>
+                    <br />
 
-                <!-- Imagen -->
-                <div class="col-12 user-img">
-                    <img src="css/img/registro.png">
-                </div> 
+                    <legend>
+                        Nombre Cliente
+                    </legend>
+                    
+                    <input type="text" class="form-control" id="nombre" onkeypress="return validarLetra(event)"/>
+                    <br />
 
-                <!-- Formulario -->
-                <form class="col-12">
-                    <div class="form-group" id="user-group">
-                        <input class="form-control" type="text" placeholder="Nombre de usuario">
-                    </div>
+                    <legend>
+                        Edad Cliente
+                    </legend>
 
-                    <div class="form-group" id="contrasena-group">
-                        <input class="form-control" type="text" placeholder="Contraseña">
-                    </div>
+                    <input type="text" class="form-control" id="edad" onkeypress="return validarNumero(event)"/>
+                    <br />
 
-                    <div class="form-group" id="contrasena-group">
-                        <input class="form-control" type="text" placeholder="Nombre del cliente" onkeypress="return validarLetra(event)">
+                    <legend>
+                        Direccion
+                    </legend>
 
-                    </div>
+                    <input type="text" class="form-control" id="direccion"/>
+                    <br />
 
-                    <div class="form-group" id="contrasena-group">
-                        <input class="form-control" type="text" placeholder="Edad" onkeypress="return validarNumero(event)">
-                    </div>
+                    <button type="button" id="crear" class="btn btn-success">Crear registro</button>
+                    <button type="button" id="insertar" class="btn btn-success">Insertar registro</button>
+                    <button type="button" id="modificar" class="btn btn-danger">Modificar registro</button>
+                    <button type="button" id="listar" class="btn btn-success">Listar registros</button>
+                    <button type="button" id="eliminar" class="btn btn-danger">Eliminar registros</button>
 
-                    <div class="form-group" id="contrasena-group">
-                        <input class="form-control" type="text" placeholder="Direccion">
-                    </div>
+                </fieldset>
+            </form>
 
-                    <button id="btn-registroC" type="submit" class="btn btn-primary">  Crear usuario<i class="fas fa-sign-in-alt"></i></button>
-                </form>
+            <hr>
+            <h3>Lista de clientes</h3>
 
-                <div class="col-12 forgot">
-                    <a href="sesion-cliente.html">Inicia sesion</a>
-                </div>
-                
-            </div>
+            <table class="table table-borderer table-hover" id="listaClientes" style="width: 715px;"></table>
+
         </div>
     </div>
     
     <!-- SCRIPTS -->
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/regsitros-cliente.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
     <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script>
-        function validarLetra(e){
-            tecla = (document.all)?e.keyCode:e.which;
-   
-            te = String.fromCharCode(tecla);
-   
-            patron = /[A-Z a-z áéíóú]/;
-   
-            return patron.test(te);
-   
-        }
 
-        function validarNumero(e){
-            tecla = (document.all)?e.keyCode:e.which;
-
-            te = String.fromCharCode(tecla);
-
-            patron = /[0-9]/;
-
-            return patron.test(te);
-        }
-    </script>
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Crud Restaurant</title>
+        <title>Crud Region</title>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <link rel="icon" href="css/img/Rapey_logo.png" type="images/png">
         <!-- Librería Google Fonts: Tipografía del sitio web -->
@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="css/registro-restaurant.css" />
 
         <!-- Funciones Javascript -->
-        <script type="text/javascript" src="js/registro-restaurant.js"></script>
+        <script type="text/javascript" src="js/registro-region.js"></script>
 
     </head>
     <body>
@@ -71,38 +71,18 @@
         <div class="container">
             <form id="frmPerson" class="form-horizontal">
                 <div class="form-group">
-                    <label for="txtID" class="col-sm-2 control-label">Rut empresa</label>
+                    <label for="txtID" class="col-sm-2 control-label">Id Region</label>
                     <div class="col-sm-4">
-                        <input type="text" id="txtID" class="form-control" placeholder="Rut empresa">
+                        <input type="text" id="txtID" class="form-control" placeholder="Id region">
                     </div>
                 </div>                    
                 <div class="form-group">
-                    <label for="txtName" class="col-lg-2 control-label">Nombre restaurant</label>
+                    <label for="txtName" class="col-lg-2 control-label">Nombre region</label>
                     <div class="col-sm-4">
-                        <input type="text" id="txtName" class="form-control" placeholder="Nombre restaurant">
+                        <input type="text" id="txtName" class="form-control" placeholder="Nombre region">
                     </div>
+                </div>               
                 </div>
-                <div class="form-group">
-                    <label for="txtFono" class="col-lg-2 control-label">Telefono local</label>
-                    <div class="col-sm-4">
-                        <input type="text" id="txtFono" class="form-control" placeholder="Telefono" onkeypress="return validarNumero(event)">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="txtRegion" class="col-lg-2 control-label">Region</label>
-                    <div class="col-sm-4">
-                        <input type="text" id="txtRegion" class="form-control" placeholder="Region_nombre">
-                    </div>
-
-                </div>
-
-                <div class="form-group">
-                    <label for="txtRegion" class="col-lg-2 control-label">Direccion</label>
-                    <div class="col-sm-4">
-                        <input type="text" id="txtDireccion" class="form-control" placeholder="Direccion">
-                    </div>
-                </div>
-
                 <div class="form-group">
                     <div class="col-lg-offset-2 col-sm-4">
                         <input type="submit" value="Insertar" id="btnSave" class="btn btn-success"/>
